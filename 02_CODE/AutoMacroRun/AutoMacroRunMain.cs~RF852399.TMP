@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AutoMacroRun
+{
+    public partial class AutoMacroRunMain : Form
+    {
+        public AutoMacroRunMain()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            textBoxKey2.Text = e.KeyData.ToString();
+        }
+
+        private void textBox1_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            TextBox tbox = (TextBox)sender;
+            tbox.Text = e.KeyData.ToString();
+        }
+    }
+}

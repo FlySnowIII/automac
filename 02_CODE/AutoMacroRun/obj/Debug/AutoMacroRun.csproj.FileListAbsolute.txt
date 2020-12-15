@@ -1,0 +1,10 @@
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\bin\Debug\AutoMacroRun.exe.config
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\bin\Debug\AutoMacroRun.exe
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\bin\Debug\AutoMacroRun.pdb
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.csprojResolveAssemblyReference.cache
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.Properties.Resources.resources
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.csproj.GenerateResource.Cache
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.exe
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.pdb
+c:\users\ptan.sbcr\documents\visual studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.AutoMacroRunMain.resources
+C:\Users\ptan.SBCR\Documents\Visual Studio 2015\Projects\AutoMacroRun\AutoMacroRun\obj\Debug\AutoMacroRun.AboutMe.resources

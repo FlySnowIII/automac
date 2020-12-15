@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AutoMacroRun
+{
+    public partial class AutoMacroRunMain : Form
+    {
+        public AutoMacroRunMain()
+        {
+            InitializeComponent();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Stop();
+            int x = Control.MousePosition.X;
+            int y = Control.MousePosition.Y;
+            labelMouse.Text = string.Format("({0},{1})", x, y);
+
+            Rectangle rect = Screen.PrimaryScreen.Bounds;
+            using (Bitmap bmp = new Bitmap(1, 1))
+            {
+                using (Graphics g = Graphics.FromImage(bmp))
+                {
+                    g.CopyFromScreen(x, y, 0, 0, new Size(1, 1));
+                }
+                labelColor.BackColor = bmp.GetPixel(0, 0);
+                labelRGB.Text = string.Format("(RGB:{0},{1},{2})", labelColor.BackColor.R, labelColor.BackColor.G, labelColor.BackColor.B);
+            }
+
+            timer2.Start();
+        }
+
+        private void AutoMacroRunMain_Load(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void textBox1_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            TextBox tbox = (TextBox)sender;
+            tbox.Text = e.KeyData.ToString();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox1Key1.Text = "";
+            textBox2Key2.Text = "";
+            textBox3Key3.Text = "";
+            textBox4Run.Text = "";
+            textBox5Sleep.Text = "";
+            textBox6MouseX.Text = "";
+            textBox7MouseY.Text = "";
+            textBox8Input.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBoxCmd.AppendText("RUN:" + textBox4Run.Text + "\n");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBoxCmd.AppendText("INPUT:" + textBox8Input.Text + "\n");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBoxCmd.AppendText("MOUSE_LEFT_CLICK" + "\n");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBoxCmd.AppendText("MOUSE_DBCLICK" + "\n");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBoxCmd.AppendText("MOUSE_RIGHT_CLICK" + "\n");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            float f = float.Parse(textBox5Sleep.Text);
+            f = f * 1000;
+            textBoxCmd.AppendText("SLEEP:" + textBox5Sleep.Text + "\n");
+        }
+    }
+}
